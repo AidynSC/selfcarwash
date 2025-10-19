@@ -1,0 +1,51 @@
+{
+  "name": "template",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "turbo vite.build",
+    "dev": "turbo vite.dev",
+    "lint": "tsc",
+    "prepare": "is-ci || husky install",
+    "preview": "turbo vite.preview",
+    "vite.build": "vite build",
+    "vite.dev": "vite --host",
+    "vite.preview": "vite preview"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,cjs}": [
+      "prettier --write"
+    ],
+    "*.{md,html,css,json,yml}": "prettier --write",
+    "package.json": "pnpm sort-package-json"
+  },
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-router-dom": "7.9.4",
+    "tilg": "0.1.1"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "0.6.1",
+    "@types/node": "22.18.11",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@vitejs/plugin-react-swc": "4.1.0",
+    "autoprefixer": "10.4.21",
+    "husky": "9.1.7",
+    "is-ci": "4.1.0",
+    "lightningcss": "1.30.2",
+    "lint-staged": "16.2.4",
+    "postcss": "8.5.6",
+    "prettier": "3.6.2",
+    "prettier-plugin-packagejson": "2.5.19",
+    "prettier-plugin-tailwindcss": "0.7.1",
+    "sort-package-json": "3.4.0",
+    "tailwindcss": "4.1.14",
+    "turbo": "2.5.8",
+    "typescript": "5.9.3",
+    "vite": "7.1.10",
+    "vite-plugin-mkcert": "1.17.9",
+    "vite-tsconfig-paths": "5.1.4"
+  }
+}
